@@ -3,7 +3,7 @@ import { useQuery } from "@apollo/client";
 import ClientRow from "./ClientRow";
 import { GET_CLIENTS } from "../queries/clientQueries";
 
-const Client = () => {
+const Clients = () => {
   const { loading, error, data } = useQuery(GET_CLIENTS);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Something went wrong</p>;
@@ -30,4 +30,4 @@ const Client = () => {
   );
 };
 
-export default Client;
+export default Clients;
